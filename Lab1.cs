@@ -7,25 +7,25 @@ public class Lab1
     // ======================= ЗАДАНИЕ 1. МЕТОДЫ =======================
 
     // 1.1 Дробная часть
-    public double fraction(double x)
+    private double fraction(double x)
     {
         return x - (long)x; // (long)x отбрасывает дробную часть
     }
 
     // 1.3 Букву в число
-    public int charToNum(char x)
+    private int charToNum(char x)
     {
         return x - '0'; // код '0' = 48, '3' = 51 -> 51 - 48 = 3
     }
 
     // 1.5 Двузначное
-    public bool is2Digits(int x)
+    private bool is2Digits(int x)
     {
         return (x >= 10 && x <= 99) || (x <= -10 && x >= -99);
     }
 
     // 1.7 Диапазон (порядок a и b неизвестен)
-    public bool isInRange(int a, int b, int num)
+    private bool isInRange(int a, int b, int num)
     {
         int left = Math.Min(a, b);
         int right = Math.Max(a, b);
@@ -33,7 +33,7 @@ public class Lab1
     }
 
     // 1.9 Равенство
-    public bool isEqual(int a, int b, int c)
+    private bool isEqual(int a, int b, int c)
     {
         return a == b && b == c;
     }
@@ -41,7 +41,7 @@ public class Lab1
     // ======================= ЗАДАНИЕ 2. УСЛОВИЯ =======================
 
     // 2.1 Модуль числа
-    public int abs(int x)
+    private int abs(int x)
     {
         if (x < 0)
         {
@@ -51,7 +51,7 @@ public class Lab1
     }
 
     // 2.3 Тридцать пять
-    public bool is35(int x)
+    private bool is35(int x)
     {
         bool by3 = x % 3 == 0;
         bool by5 = x % 5 == 0;
@@ -63,7 +63,7 @@ public class Lab1
     }
 
     // 2.5 Тройной максимум (две инструкции if, без вложенных)
-    public int max3(int x, int y, int z)
+    private int max3(int x, int y, int z)
     {
         int max = x;
         if (y > max)
@@ -78,7 +78,7 @@ public class Lab1
     }
 
     // 2.7 Двойная сумма
-    public int sum2(int x, int y)
+    private int sum2(int x, int y)
     {
         int sum = x + y;
         if (sum >= 10 && sum <= 19)
@@ -89,7 +89,7 @@ public class Lab1
     }
 
     // 2.9 День недели (switch)
-    public string day(int x)
+    private string day(int x)
     {
         switch (x)
         {
@@ -107,7 +107,7 @@ public class Lab1
     // ======================= ЗАДАНИЕ 3. ЦИКЛЫ =======================
 
     // 3.1 Числа подряд
-    public string listNums(int x)
+    private string listNums(int x)
     {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i <= x; i++)
@@ -122,7 +122,7 @@ public class Lab1
     }
 
     // 3.3 Чётные числа (без if)
-    public string chet(int x)
+    private string chet(int x)
     {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i <= x; i += 2)
@@ -133,7 +133,7 @@ public class Lab1
     }
 
     // 3.5 Длина числа
-    public int numLen(long x)
+    private int numLen(long x)
     {
         int count = 0;
         do
@@ -145,7 +145,7 @@ public class Lab1
     }
 
     // 3.7 Квадрат
-    public void square(int x)
+    private void square(int x)
     {
         for (int i = 0; i < x; i++)
         {
@@ -158,7 +158,7 @@ public class Lab1
     }
 
     // 3.9 Правый треугольник
-    public void rightTriangle(int x)
+    private void rightTriangle(int x)
     {
         for (int i = 1; i <= x; i++)
         {
@@ -177,7 +177,7 @@ public class Lab1
     // ======================= ЗАДАНИЕ 4. МАССИВЫ =======================
 
     // 4.1 Поиск первого значения
-    public int findFirst(int[] arr, int x)
+    private int findFirst(int[] arr, int x)
     {
         for (int i = 0; i < arr.Length; i++)
         {
@@ -190,7 +190,7 @@ public class Lab1
     }
 
     // 4.3 Поиск максимального по модулю
-    public int maxAbs(int[] arr)
+    private int maxAbs(int[] arr)
     {
         if (arr == null || arr.Length == 0)
         {
@@ -209,7 +209,7 @@ public class Lab1
     }
 
     // 4.5 Добавление массива в массив
-    public int[] add(int[] arr, int[] ins, int pos)
+    private int[] add(int[] arr, int[] ins, int pos)
     {
         if (pos < 0 || pos > arr.Length)
         {
@@ -232,7 +232,7 @@ public class Lab1
     }
 
     // 4.7 Возвратный реверс
-    public int[] reverseBack(int[] arr)
+    private int[] reverseBack(int[] arr)
     {
         int[] result = new int[arr.Length];
         for (int i = 0; i < arr.Length; i++)
@@ -243,7 +243,7 @@ public class Lab1
     }
 
     // 4.9 Все вхождения
-    public int[] findAll(int[] arr, int x)
+    private int[] findAll(int[] arr, int x)
     {
         int count = 0;
         for (int i = 0; i < arr.Length; i++)
