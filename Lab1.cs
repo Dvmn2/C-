@@ -7,7 +7,7 @@ public class Lab1
     // 1.1 Дробная часть
     private double fraction(double x)
     {
-        return x - (long)x; // (long)x отбрасывает дробную часть
+        return x - (long)x;
     }
 
     // 1.3 Букву в число
@@ -22,7 +22,7 @@ public class Lab1
         return (x >= 10 && x <= 99) || (x <= -10 && x >= -99);
     }
 
-    // 1.7 Диапазон (порядок a и b неизвестен)
+    // 1.7 Диапазон
     private bool isInRange(int a, int b, int num)
     {
         int left = Math.Min(a, b);
@@ -59,7 +59,7 @@ public class Lab1
         return by3 || by5;
     }
 
-    // 2.5 Тройной максимум (две инструкции if, без вложенных)
+    // 2.5 Тройной максимум
     private int max3(int x, int y, int z)
     {
         int max = x;
@@ -85,7 +85,7 @@ public class Lab1
         return sum;
     }
 
-    // 2.9 День недели (switch)
+    // 2.9 День недели
     private string day(int x)
     {
         switch (x)
@@ -117,7 +117,7 @@ public class Lab1
         return sb.ToString();
     }
 
-    // 3.3 Чётные числа (без if)
+    // 3.3 Чётные числа
     private string chet(int x)
     {
         StringBuilder sb = new StringBuilder();
@@ -362,7 +362,13 @@ public class Lab1
 
     public void runTask1()
     {
-        Console.WriteLine("\nЗадание 1. Методы: 1-Дробная часть, 3-Букву в число, 5-Двузначное, 7-Диапазон, 9-Равенство");
+        Console.WriteLine(
+            "\nЗадание 1. Методы:" +
+            "1-Дробная часть," +
+            "3-Букву в число," +
+            "5-Двузначное," +
+            "7-Диапазон," +
+            "9-Равенство");
         switch (readInt("Номер задачи: ", 1, 9))
         {
             case 1:
@@ -394,7 +400,13 @@ public class Lab1
 
     public void runTask2()
     {
-        Console.WriteLine("\nЗадание 2. Условия: 1-Модуль, 3-Тридцать пять, 5-Тройной максимум, 7-Двойная сумма, 9-День недели");
+        Console.WriteLine(
+            "\nЗадание 2. Условия:" +
+            "1-Модуль," +
+            "3-Тридцать пять," +
+            "5-Тройной максимум," +
+            "7-Двойная сумма," +
+            "9-День недели");
         switch (readInt("Номер задачи: ", 1, 9))
         {
             case 1:
@@ -425,7 +437,13 @@ public class Lab1
 
     public void runTask3()
     {
-        Console.WriteLine("\nЗадание 3. Циклы: 1-Числа подряд, 3-Чётные числа, 5-Длина числа, 7-Квадрат, 9-Правый треугольник");
+        Console.WriteLine(
+            "\nЗадание 3. Циклы:" +
+            "1-Числа подряд," +
+            "3-Чётные числа," +
+            "5-Длина числа," +
+            "7-Квадрат," +
+            "9-Правый треугольник");
         switch (readInt("Номер задачи: ", 1, 9))
         {
             case 1:
@@ -451,7 +469,13 @@ public class Lab1
 
     public void runTask4()
     {
-        Console.WriteLine("\nЗадание 4. Массивы: 1-Первое вхождение, 3-Максимум по модулю, 5-Вставка массива, 7-Возвратный реверс, 9-Все вхождения");
+        Console.WriteLine(
+            "\nЗадание 4. Массивы:" +
+            "1-Первое вхождение," +
+            "3-Максимум по модулю," +
+            "5-Вставка массива," +
+            "7-Возвратный реверс," +
+            "9-Все вхождения");
         switch (readInt("Номер задачи: ", 1, 9))
         {
             case 1:

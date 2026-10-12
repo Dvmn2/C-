@@ -1,7 +1,6 @@
 ﻿using System.Globalization;
 using System.Text;
 
-// Лабораторная работа №1. Решены нечётные задачи (1, 3, 5, 7, 9) из каждого задания.
 public class Program
 {
     public static void Main()
@@ -11,7 +10,13 @@ public class Program
         Console.WriteLine("=== Лабораторная работа №1 ===");
         while (true)
         {
-            Console.WriteLine("\nВыберите задание: 1-Методы, 2-Условия, 3-Циклы, 4-Массивы, 0-Выход");
+            Console.WriteLine(
+                "\nВыберите задание:" +
+                "1-Методы," +
+                "2-Условия," +
+                "3-Циклы," +
+                "4-Массивы," +
+                "0-Выход");
             int task = lab.readInt("Ваш выбор: ", 0, 4);
             if (task == 0)
             {
