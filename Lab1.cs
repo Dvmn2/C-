@@ -1,10 +1,8 @@
 using System.Globalization;
 using System.Text;
 
-// Лабораторная работа №1. Решены нечётные задачи (1, 3, 5, 7, 9) из каждого задания.
 public class Lab1
 {
-    // ======================= ЗАДАНИЕ 1. МЕТОДЫ =======================
 
     // 1.1 Дробная часть
     private double fraction(double x)
@@ -38,7 +36,6 @@ public class Lab1
         return a == b && b == c;
     }
 
-    // ======================= ЗАДАНИЕ 2. УСЛОВИЯ =======================
 
     // 2.1 Модуль числа
     private int abs(int x)
@@ -104,7 +101,6 @@ public class Lab1
         }
     }
 
-    // ======================= ЗАДАНИЕ 3. ЦИКЛЫ =======================
 
     // 3.1 Числа подряд
     private string listNums(int x)
@@ -174,7 +170,6 @@ public class Lab1
         }
     }
 
-    // ======================= ЗАДАНИЕ 4. МАССИВЫ =======================
 
     // 4.1 Поиск первого значения
     private int findFirst(int[] arr, int x)
@@ -265,7 +260,7 @@ public class Lab1
         return result;
     }
 
-    // ======================= ВСПОМОГАТЕЛЬНЫЕ МЕТОДЫ ВВОДА =======================
+    // ВСПОМОГАТЕЛЬНЫЕ МЕТОДЫ ВВОДА
 
     public int readInt(string prompt, int min = int.MinValue, int max = int.MaxValue)
     {
@@ -323,7 +318,6 @@ public class Lab1
         }
     }
 
-    // Ввод массива: числа через пробел или запятую
     public int[] readArray(string prompt)
     {
         while (true)
@@ -364,7 +358,7 @@ public class Lab1
         Console.WriteLine("Результат: " + (b ? "true" : "false"));
     }
 
-    // ======================= МЕНЮ ЗАДАНИЙ =======================
+    // МЕНЮ ЗАДАНИЙ 
 
     public void runTask1()
     {
