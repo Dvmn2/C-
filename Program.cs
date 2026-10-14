@@ -1,5 +1,4 @@
-﻿using System.Globalization;
-using System.Text;
+﻿using System.Text;
 
 public class Program
 {
@@ -11,11 +10,11 @@ public class Program
         while (true)
         {
             Console.WriteLine(
-                "\nВыберите задание:" +
-                "1-Методы," +
-                "2-Условия," +
-                "3-Циклы," +
-                "4-Массивы," +
+                "\nВыберите задание: " +
+                "1-Методы, " +
+                "2-Условия, " +
+                "3-Циклы, " +
+                "4-Массивы, " +
                 "0-Выход");
             int task = lab.readInt("Ваш выбор: ", 0, 4);
             if (task == 0)
