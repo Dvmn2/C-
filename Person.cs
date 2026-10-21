@@ -5,29 +5,35 @@ namespace Lab2;
 /// </summary>
 public class Person
 {
+    private Name _name;
     private Person? _father;
     private int _height;
 
-    /// <summary>
-    /// Initializes a new instance of the <see cref="Person"/> class.
-    /// </summary>
     public Person(Name name, int height, Person? father = null)
     {
-        Name = name ?? throw new ArgumentNullException(nameof(name));
+        _name = name ?? throw new ArgumentNullException(nameof(name));
         Height = height;
         Father = father;
     }
 
-    public Name Name { get; set; }
+    public Name Name
+    {
+        get { return _name; }
+        set { _name = value; }
+    }
 
     public int Height
     {
-        get => _height;
+        get { return _height; }
         set
         {
             if (value <= 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(value), "Рост должен быть положительным.");
+            }
+            if (value >= 300)
+            {
+                throw new ArgumentOutOfRangeException(nameof(value), "Рост должен быть меньше 3-х метров.");
             }
 
             _height = value;
@@ -36,7 +42,7 @@ public class Person
 
     public Person? Father
     {
-        get => _father;
+        get { return _father; }
         set
         {
             for (Person? ancestor = value; ancestor != null; ancestor = ancestor._father)
@@ -87,12 +93,24 @@ public class Person
         string name = fatherFirstName.Trim();
         char last = char.ToLowerInvariant(name[^1]);
 
-        return last switch
+        switch (last)
         {
-            'й' or 'ь' => name[..^1] + "евич",
-            'а' or 'я' => name[..^1] + "ич",
-            'о' or 'е' or 'и' or 'у' or 'ы' or 'э' or 'ю' => name + "вич",
-            _ => name + "ович",
-        };
+            case 'й':
+            case 'ь':
+                return name[..^1] + "евич";
+            case 'а':
+            case 'я':
+                return name[..^1] + "ич";
+            case 'о':
+            case 'е':
+            case 'и':
+            case 'у':
+            case 'ы':
+            case 'э':
+            case 'ю':
+                return name + "вич";
+            default:
+                return name + "ович";
+        }
     }
 }

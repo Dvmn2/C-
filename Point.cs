@@ -7,19 +7,26 @@ namespace Lab2;
 /// </summary>
 public class Point
 {
-    /// <summary>
-    /// Initializes a new instance of the <see cref="Point"/> class.
-    /// Создать точку можно только указав обе координаты.
-    /// </summary>
+    private double _x;
+    private double _y;
+
     public Point(double x, double y)
     {
         X = x;
         Y = y;
     }
 
-    public double X { get; set; }
+    public double X
+    {
+        get { return _x; }
+        set { _x = value; }
+    }
 
-    public double Y { get; set; }
+    public double Y
+    {
+        get { return _y; }
+        set { _y = value; }
+    }
 
     /// <summary>
     /// Расстояние до другой точки.

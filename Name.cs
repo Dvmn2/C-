@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace Lab2;
 
 /// <summary>
@@ -6,9 +8,10 @@ namespace Lab2;
 /// </summary>
 public class Name
 {
-    /// <summary>
-    /// Initializes a new instance of the <see cref="Name"/> class.
-    /// </summary>
+    private string? _lastName;
+    private string? _firstName;
+    private string? _middleName;
+
     public Name(string? lastName = null, string? firstName = null, string? middleName = null)
     {
         LastName = lastName;
@@ -16,11 +19,23 @@ public class Name
         MiddleName = middleName;
     }
 
-    public string? LastName { get; set; }
+    public string? LastName
+    {
+        get { return _lastName; }
+        set { _lastName = value; }
+    }
 
-    public string? FirstName { get; set; }
+    public string? FirstName
+    {
+        get { return _firstName; }
+        set { _firstName = value; }
+    }
 
-    public string? MiddleName { get; set; }
+    public string? MiddleName
+    {
+        get { return _middleName; }
+        set { _middleName = value; }
+    }
 
     /// <summary>
     /// Формат: «Фамилия Имя Отчество», незаданные части пропускаются.
@@ -28,6 +43,22 @@ public class Name
     public override string ToString()
     {
         string?[] parts = { LastName, FirstName, MiddleName };
-        return string.Join(" ", parts.Where(part => !string.IsNullOrWhiteSpace(part)));
+        var result = new StringBuilder();
+        foreach (string? part in parts)
+        {
+            if (string.IsNullOrWhiteSpace(part))
+            {
+                continue;
+            }
+
+            if (result.Length > 0)
+            {
+                result.Append(' ');
+            }
+
+            result.Append(part);
+        }
+
+        return result.ToString();
     }
 }

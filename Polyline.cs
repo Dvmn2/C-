@@ -5,19 +5,20 @@ namespace Lab2;
 /// </summary>
 public class Polyline
 {
-    /// <summary>
-    /// Initializes a new instance of the <see cref="Polyline"/> class.
-    /// Без параметров создаётся пустая ломаная.
-    /// </summary>
+    private Point[] _points;
+
     public Polyline(params Point[] points)
     {
         ArgumentNullException.ThrowIfNull(points);
 
-        // Копируем массив, но не сами точки: точки могут быть общими у нескольких ломаных.
-        Points = (Point[])points.Clone();
+        _points = (Point[])points.Clone();
     }
 
-    public Point[] Points { get; private set; }
+    public Point[] Points
+    {
+        get { return _points; }
+        private set { _points = value; }
+    }
 
     /// <summary>
     /// Добавляет точки; создаётся новый массив из старых и новых значений.
@@ -26,7 +27,11 @@ public class Polyline
     {
         ArgumentNullException.ThrowIfNull(points);
 
-        Points = Points.Concat(points).ToArray();
+        var combined = new Point[Points.Length + points.Length];
+        Array.Copy(Points, 0, combined, 0, Points.Length);
+        Array.Copy(points, 0, combined, Points.Length, points.Length);
+
+        Points = combined;
     }
 
     /// <summary>
@@ -45,6 +50,12 @@ public class Polyline
 
     public override string ToString()
     {
-        return $"Линия [{string.Join(", ", Points.Select(point => point.ToString()))}]";
+        var texts = new string[Points.Length];
+        for (int i = 0; i < Points.Length; i++)
+        {
+            texts[i] = Points[i].ToString();
+        }
+
+        return $"Линия [{string.Join(", ", texts)}]";
     }
 }

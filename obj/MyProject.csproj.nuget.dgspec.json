@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dima\\Programs\\C#\\MyProject\\MyProject.csproj": {}
+    "C:\\Dima\\Programs\\C#\\myproject\\MyProject.csproj": {}
   },
   "projects": {
-    "C:\\Dima\\Programs\\C#\\MyProject\\MyProject.csproj": {
+    "C:\\Dima\\Programs\\C#\\myproject\\MyProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dima\\Programs\\C#\\MyProject\\MyProject.csproj",
+        "projectUniqueName": "C:\\Dima\\Programs\\C#\\myproject\\MyProject.csproj",
         "projectName": "MyProject",
-        "projectPath": "C:\\Dima\\Programs\\C#\\MyProject\\MyProject.csproj",
+        "projectPath": "C:\\Dima\\Programs\\C#\\myproject\\MyProject.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Dima\\Programs\\C#\\MyProject\\obj\\",
+        "outputPath": "C:\\Dima\\Programs\\C#\\myproject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
