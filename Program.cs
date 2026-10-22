@@ -2,7 +2,9 @@ using System.Globalization;
 using System.Text;
 
 namespace Lab2;
-
+// я 10
+// о 12
+// г 3
 public static class Program
 {
     /// <summary>
@@ -19,7 +21,6 @@ public static class Program
         {
             Console.WriteLine();
             Console.WriteLine("=== Лабораторная работа №2, вариант 10 ===");
-            Console.WriteLine("Все данные вводятся с клавиатуры. Примеры из заданий показываются как подсказка для проверки.");
             Console.WriteLine("1 - Задача 1.3: Имена");
             Console.WriteLine("2 - Задача 2.2: Человек с именем");
             Console.WriteLine("3 - Задача 2.3: Человек с родителем");
