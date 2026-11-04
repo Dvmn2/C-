@@ -1,0 +1,19 @@
+ð<?xml version="1.0" encoding="utf-16"?>
+<Toy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Dino</Name>
+  <Price>150</Price>
+  <MinAge>3</MinAge>
+  <MaxAge>8</MaxAge>
+</Toy>ï<?xml version="1.0" encoding="utf-16"?>
+<Toy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Car</Name>
+  <Price>100</Price>
+  <MinAge>2</MinAge>
+  <MaxAge>5</MaxAge>
+</Toy>ó<?xml version="1.0" encoding="utf-16"?>
+<Toy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Rubic</Name>
+  <Price>200</Price>
+  <MinAge>10</MinAge>
+  <MaxAge>18</MaxAge>
+</Toy>

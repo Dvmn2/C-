@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "0w/xMie3zRM=",
+  "dgSpecHash": "LLABevuFt+w=",
   "success": true,
-  "projectFilePath": "C:\\Dima\\Programs\\C#\\LAB3\\LAB3.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Dima\\Programs\\C#\\LAB3\\Lab3.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.25\\microsoft.netcore.app.ref.8.0.25.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.25\\microsoft.windowsdesktop.app.ref.8.0.25.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.25\\microsoft.aspnetcore.app.ref.8.0.25.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.25\\microsoft.netcore.app.host.win-x64.8.0.25.nupkg.sha512"
+  ],
   "logs": []
 }
